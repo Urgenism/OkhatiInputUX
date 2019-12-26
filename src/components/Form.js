@@ -49,6 +49,7 @@ class form extends Component {
     this.formRef = node;
   };
 
+  // close dropdown
   handleClickOutside = event => {
     if (this.formRef && !this.formRef.contains(event.target)) {
       this.setState({ displayDropdown: false });
@@ -56,10 +57,7 @@ class form extends Component {
     }
   };
 
-  getInputRef = ref => {
-    this.setState({ inputRef: ref });
-  };
-
+  // open dropdown
   openOptionsHandler = event => {
     this.setState({ displayDropdown: true });
     this.inputRef.current.focus();
